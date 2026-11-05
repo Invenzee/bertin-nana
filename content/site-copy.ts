@@ -8,7 +8,7 @@ export const copy = {
     eyebrow: "FAITH. REASON. A DIFFERENT PERSPECTIVE.",
     heroLines: ["HOW GOD", "SEES THE", "WORLD."],
     heroDescription: "Beyond what we see. Beyond what we know. An exploration of faith, science, and what it means to be human.",
-    by: "A BOOK BY", coverCaption: "ORIGINAL FRENCH COVER", scroll: "SCROLL TO DISCOVER",
+    by: "A BOOK BY", coverCaption: "ENGLISH COVER", scroll: "SCROLL TO DISCOVER",
     circle: "FAITH · REASON · REVELATION · ",
     ribbon: ["ASK BIGGER QUESTIONS", "SEE BEYOND THE ORDINARY", "EXPLORE A DIFFERENT PERSPECTIVE"],
     bookLabel: "01 / THE BOOK", bookHeading: ["BIG QUESTIONS.", "A NEW LENS."],

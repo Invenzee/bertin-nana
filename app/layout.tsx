@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     alternateLocale: "fr_FR",
-    images: [{ url: "/images/book-cover-fr.jpg", width: 1800, height: 2700, alt: "Comment Dieu voit le monde — Bertin Nana" }],
+    images: [{ url: "/images/book-cover-en.jpg", width: 1800, height: 2700, alt: "How God Sees the World — Bertin Nana" }],
   },
 };
 
