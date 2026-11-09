@@ -1,27 +1,18 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
 import "./globals.css";
-
-const poppins = Poppins({
-  subsets: ["latin", "latin-ext"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-poppins",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: "Bertin Nana — How God Sees the World",
-  description: "Explore How God Sees the World by Bertin Nana. A personal journey through Christian faith, mathematics, philosophy, and the mysteries of the universe. Discover the book in English and French.",
+  description: "Explore How God Sees the World by Bertin Nana, a book about Christian faith, mathematics, and the mysteries of the universe.",
   openGraph: {
     title: "Bertin Nana — How God Sees the World",
     description: "Faith. Reason. A different perspective.",
     type: "website",
     locale: "en_US",
-    alternateLocale: "fr_FR",
-    images: [{ url: "/images/book-cover-en.jpg", width: 1800, height: 2700, alt: "How God Sees the World — Bertin Nana" }],
+    images: [{ url: "/figma/book-cover.webp", width: 1365, height: 2048, alt: "How God Sees the World — Bertin Nana" }],
   },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en" suppressHydrationWarning><body className={poppins.variable} suppressHydrationWarning>{children}</body></html>;
+  return <html lang="en"><body>{children}</body></html>;
 }
