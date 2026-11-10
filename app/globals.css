@@ -78,7 +78,13 @@ h1 em, h2 em { font-style: normal; color: var(--gold); background: var(--gold-gr
 }
 .italic-copy { font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-weight: 400; color: #e5dfd5; line-height: 1.48; }
 .figma-header { position: absolute; inset: 0 0 auto; z-index: 5; }
-.header-layout { height: calc(138 * var(--u)); display: flex; align-items: center; justify-content: space-between; }
+.header-layout { height: calc(138 * var(--u)); display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.header-actions { display: flex; align-items: center; gap: max(10px, calc(22 * var(--u))); margin-left: auto; }
+.lang-switch { display: flex; flex: none; border: 1px solid #b78c06; }
+.lang-switch button { min-width: 42px; min-height: 34px; padding: 6px 9px; border: 0; background: transparent; color: #fff; font-family: var(--font-poppins), sans-serif; font-size: 13px; font-weight: 600; }
+.lang-switch button[aria-pressed="true"] { background: var(--gold-gradient); color: #100a00; }
+.lang-switch button:hover { color: var(--gold); }
+.lang-switch button[aria-pressed="true"]:hover { color: #100a00; }
 .header-logo { width: calc(120 * var(--u)); height: auto; }
 .main-nav { display: flex; align-items: center; gap: calc(67 * var(--u)); font-size: max(11px, calc(20 * var(--u))); text-transform: uppercase; }
 .main-nav > a:not(.gold-button):hover { color: var(--gold); }
@@ -128,8 +134,8 @@ h1 em, h2 em { font-style: normal; color: var(--gold); background: var(--gold-gr
   gap: 12px;
   padding: 9% 8% 8%;
   background:
-    radial-gradient(120% 80% at 50% 0%, #3a2a10 0%, transparent 55%),
-    linear-gradient(180deg, #16120c 0%, #090807 100%);
+    linear-gradient(180deg, rgba(8, 6, 4, .42) 0%, rgba(8, 6, 4, .78) 48%, rgba(8, 6, 4, .94) 100%),
+    url("/figma/nebula.webp") center 30% / cover no-repeat;
   border: 1px solid #b78c06;
   color: #f4efe6;
 }
@@ -158,10 +164,12 @@ h1 em, h2 em { font-style: normal; color: var(--gold); background: var(--gold-gr
   font-family: "Cormorant Garamond", Georgia, serif;
   font-style: italic;
   font-weight: 400;
-  font-size: clamp(15px, calc(22 * var(--u)), 22px);
-  line-height: 1.35;
+  font-size: clamp(18px, calc(26 * var(--u)), 26px);
+  line-height: 1.32;
   color: #e5dfd5;
 }
+.book-back-copy p { margin: 0; }
+.book-back-copy p + p { margin-top: .65em; }
 .book-back .gold-button { width: 100%; min-width: 0; margin-top: auto; font-family: var(--font-poppins), sans-serif; font-size: 14px; font-weight: 600; min-height: 44px; }
 .hero-cover { animation: hero-cover-in 1s .12s cubic-bezier(.22,1,.36,1) both; }
 @media (hover: hover) and (pointer: fine) {
@@ -405,7 +413,7 @@ h1 em, h2 em { font-style: normal; color: var(--gold); background: var(--gold-gr
   .book-back { gap: 8px; padding: 16px 14px 14px; }
   .book-back-kicker { font-size: 11px; letter-spacing: .14em; }
   .book-back h3 { font-size: 22px; }
-  .book-back-copy { font-size: 14px; line-height: 1.28; }
+  .book-back-copy { font-size: 16px; line-height: 1.34; }
   .gold-button, .outline-button { min-height: 40px; min-width: 116px; padding: 9px 13px; font-size: 11px; }
   .book-actions { gap: 10px; margin-top: 15px; }
   .retail-strip { min-height: 60px; gap: 12px; flex-wrap: wrap; padding: 11px 14px; }

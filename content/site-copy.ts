@@ -14,7 +14,7 @@ export const copy = {
     bookLabel: "01 / THE BOOK", bookHeading: ["BIG QUESTIONS.", "A NEW LENS."],
     bookIntro: "What if understanding the world began with seeing it differently?",
     bookText: "In How God Sees the World, Bertin Nana brings Christian belief into conversation with mathematics, physics, and philosophy. Across 25 chapters, he presents his personal understanding of creation, love, human existence, and the search for goodness.",
-    bookText2: "Written for the curious mind, this is an invitation to reflect on life's deepest questions — and to explore the connections between the spiritual and the scientific.",
+    bookText2: "Written for the curious mind, this is an invitation to reflect on life's deepest questions and to explore the connections between the spiritual and the scientific.",
     stats: [["25", "Chapters to explore"], ["01", "Connected vision"]],
     quote: "The question of God is the question of the aspiration of man to purity, love, justice, and perfect kindness.",
     quoteSource: "BERTIN NANA", quoteFrom: "From the introduction",
