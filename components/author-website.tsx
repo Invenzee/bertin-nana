@@ -81,6 +81,39 @@ function Cover({ className = "", preload = false }: { className?: string; preloa
   );
 }
 
+function FlipCover({ className = "", preload = false }: { className?: string; preload?: boolean }) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div
+      className={`book-flip${open ? " is-open" : ""} ${className}`}
+      onClick={(event) => {
+        if ((event.target as HTMLElement).closest("a")) return;
+        if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+        setOpen((value) => !value);
+      }}
+    >
+      <div className="book-flip-inner">
+        <div className="book-face book-front">
+          <Image
+            src={asset + "book-cover.webp"}
+            alt="How God Sees the World by Bertin Nana"
+            fill
+            sizes="(max-width: 640px) 54vw, 28vw"
+            preload={preload}
+          />
+        </div>
+        <div className="book-face book-back">
+          <p className="book-back-kicker">A book by Bertin Nana</p>
+          <h3>How <em>God</em> sees the world</h3>
+          <p className="book-back-copy">{copy.en.bookText}</p>
+          <OrderButton />
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function SectionLabel({ children }: { children: ReactNode }) {
   return <p className="section-label">{children}</p>;
 }
@@ -187,7 +220,7 @@ export default function AuthorWebsite() {
             </div>
             <div className="hero-art">
               <Image className="hero-glow" src={asset + "book-glow.webp"} width={984} height={984} alt="" />
-              <Cover className="hero-cover" preload />
+              <FlipCover className="hero-cover" preload />
             </div>
           </div>
         </section>
